@@ -1,0 +1,82 @@
+{
+	"name": "pcb-copycat",
+	"uuid": "a384de2fc15141d1952eca89e060b674",
+	"displayName": "PCB Copycat",
+	"description": "从不同PCB版本拷贝位置信息的工具",
+	"version": "1.0.9",
+	"publisher": "Copycat <support[#]copycat.cn>",
+	"engines": {
+		"eda": "^2.3.0"
+	},
+	"license": "Apache-2.0",
+	"repository": {
+		"type": "extension-store",
+		"url": ""
+	},
+	"categories": "Other",
+	"keywords": ["SDK"],
+	"images": {
+		"logo": "./images/logo.png"
+	},
+	"homepage": "https://pro.lceda.cn",
+	"bugs": "https://lceda.cn/page/feedback?originPage=other",
+	"activationEvents": {},
+	"entry": "./dist/index",
+	"dependentExtensions": {},
+	"headerMenus": {
+		"home": [
+			{
+				"id": "copycat-home-menu",
+				"title": "Copycat",
+				"menuItems": [
+					{
+						"id": "about",
+						"title": "About...",
+						"registerFn": "about"
+					}
+				]
+			}
+		],
+		"sch": [
+			{
+				"id": "copycat-home-sch",
+				"title": "Copycat Sch",
+				"menuItems": [
+					{
+						"id": "about",
+						"title": "About...",
+						"registerFn": "about"
+					}
+				]
+			}
+		],
+		"pcb": [
+			{
+				"id": "copycat-home-pcb",
+				"title": "Copycat PCB",
+				"menuItems": [
+					{
+						"id": "save-comp-position",
+						"title": "Save component position to file",
+						"registerFn": "save_comp_position"
+					},
+					{
+						"id": "verify-comp-position",
+						"title": "Verify component position",
+						"registerFn": "verify_comp_position"
+					},
+					{
+						"id": "restore-comp-position",
+						"title": "Restore component position from file",
+						"registerFn": "restore_comp_position"
+					},
+					{
+						"id": "about",
+						"title": "About...",
+						"registerFn": "about"
+					}
+				]
+			}
+		]
+	}
+}
